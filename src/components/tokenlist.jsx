@@ -9,13 +9,22 @@ const TokenList=()=>{
      useEffect(()=>{
         
         const fetchData=async ()=>{
-            const res= await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=true")
+            const res= await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=truehttps://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=true")
             settokenData(res.data)
+            
         }
 
         fetchData()
 
      },[])
+
+     const setStorage=()=>{
+        chrome.storage.sync.set({tokens:tokenData}, () =>{
+            console.log('Value is set to ' + tokenData);
+          });
+     }
+
+     setStorage()
 
      console.log(tokenData)
      
@@ -31,7 +40,7 @@ const TokenList=()=>{
                </div>
               
             {
-             tokenData.map((token)=>{
+             tokenData.slice(0,9).map((token)=>{
                  const {image,symbol,current_price,price_change_percentage_24h}=token
                  return(
                    <div className="grid grid-cols-3 mt-5" >

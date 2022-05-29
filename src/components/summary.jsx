@@ -1,6 +1,6 @@
 import React from "react"
 
-const BotSummary=({children, cname})=>{
+const Summary=({children, cname})=>{
 
 return(
     <div className={cname}>
@@ -10,4 +10,4 @@ return(
 
 }
 
-export default BotSummary
+export default Summary

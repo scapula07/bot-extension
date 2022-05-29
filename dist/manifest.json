@@ -9,8 +9,13 @@
         "default_popup": "popup.html"
        
       },
+     
 
       "host_permissions": [
          "https://api.coingecko.com/"
+      ],
+      "permissions": [
+        "storage"
       ]
+
   }

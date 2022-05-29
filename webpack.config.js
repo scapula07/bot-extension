@@ -6,7 +6,10 @@ const  MiniCssExtractPlugin =require("mini-css-extract-plugin")
 module.exports = {                           
   entry: {
       popup:["regenerator-runtime/runtime.js",'./src/popup.jsx'],
-      arbbot:["regenerator-runtime/runtime.js","./src/arbbot.jsx"]
+      arbbot:["regenerator-runtime/runtime.js","./src/arbbot.jsx"],
+      portfolio:["regenerator-runtime/runtime.js","./src/portfolio.jsx"],
+      rent:["regenerator-runtime/runtime.js","./src/rent.jsx"]
+
     },
 
   output: {
@@ -23,7 +26,14 @@ new HtmlWebpackPlugin({
   template:"./src/arbbot.html",
   filename:"arbbot.html"
 }),
-
+new HtmlWebpackPlugin({
+  template:"./src/portfolio.html",
+  filename:"portfolio.html"
+}),
+new HtmlWebpackPlugin({
+  template:"./src/rent.html",
+  filename:"rent.html"
+}),
 new MiniCssExtractPlugin({
 filename:"[name].css",
 
