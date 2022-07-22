@@ -3,7 +3,7 @@ import React from "react";
 const LayOut =({children})=>{
 
   return(
-      <div className="w-3/5 ">
+      <div className="w-full lg:w-3/5 ">
          
           
           {children}

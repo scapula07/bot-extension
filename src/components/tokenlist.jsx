@@ -40,7 +40,7 @@ const TokenList=()=>{
                </div>
               
             {
-             tokenData.slice(0,9).map((token)=>{
+             tokenData.slice(0,5).map((token)=>{
                  const {image,symbol,current_price,price_change_percentage_24h}=token
                  return(
                    <div className="grid grid-cols-3 mt-5" >
