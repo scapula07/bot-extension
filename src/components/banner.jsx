@@ -3,7 +3,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import Card from './card.jsx';
 const Banner=() =>{
-    const items=algobots,map(()=>{
+    const items=algobots.map(()=>{
         return(
             <Card>
                 <img />
